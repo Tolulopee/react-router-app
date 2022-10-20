@@ -6,12 +6,14 @@ import Users from './Components/Users';
 import OurVision from './Components/Ourvision';
 import ContactUs from './Components/Contactus';
 import PageNotFound from './Components/PageNotFound';
+import ErrorFallback from './Components/ErrorFallBack'
 
 
 
 
 //Create a Home Page component
 function Home(){
+  try{
   return(
     <div className="home-container">
       <h1>This is my home page </h1>
@@ -23,7 +25,9 @@ function Home(){
         <NavLink to ="/users" >Users</NavLink>
       </section>
     </div>
-  )
+  )} catch (error) {
+    return <ErrorFallback error={error} />
+  }
 }
 
 

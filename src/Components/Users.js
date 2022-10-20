@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import UserPage from "./UserPage";
+import ErrorFallback from './ErrorFallBack';
  
  
  export default function Users(){
@@ -21,7 +22,12 @@ import UserPage from "./UserPage";
         fetchUsers()
     }, [])
 
-    
+    //Get current Users
+    const indexOfLastUser = currentPage * usersPerPage;
+    const indexOfFirstUser = indexOfLastUser -usersPerPage;
+    //const currentUsers= Users.slice(indexOfFirstUser , indexOfLastUser)
+
+    try{
 
 
     return(
@@ -29,6 +35,8 @@ import UserPage from "./UserPage";
         <h1>Users</h1>
         <UserPage users={users} loading={loading}/>
       </div>
-    )
+    )} catch(error){
+      return <ErrorFallback error={error} />
+    }
   }
   

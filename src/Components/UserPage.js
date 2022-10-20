@@ -1,19 +1,27 @@
 import React from 'react'
-import Users from './Users';
+
+
+import users from './Users'
 
 const UserPage= ({ users, loading}) => {
     if(loading){
         return <h2>Loading..</h2>
     }
-  return (
-    <ul > 
-        {Users.map(user =>(
+   return (
+
+    
+
+       <div>
+         {users.map(user =>(
             <li key ={user.id}>
                 {user.name}
             </li>
         ))}
 
-    </ul>
+        </div>
+
+    
+    
   )
 }
 
