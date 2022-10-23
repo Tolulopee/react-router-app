@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-import users from './Users'
 
-const UserPage= ({ users, loading}) => {
+
+const UserPage= ({ Users, loading}) => {
     if(loading){
         return <h2>Loading..</h2>
     }

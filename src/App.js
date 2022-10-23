@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes, Route, NavLink,Switch} from 'react-router-dom';
+import {Routes, Route, NavLink,} from 'react-router-dom';
 
 import About from './Components/About';
 import Users from './Components/Users';
@@ -13,11 +13,11 @@ import ErrorFallback from './Components/ErrorFallBack'
 
 //Create a Home Page component
 function Home(){
-  try{
+ 
   return(
     <div className="home-container">
-      <h1>This is my home page </h1>
-      <p>Putting a bit of text here</p>
+      <h1>T-Lab Diagonistics </h1>
+      <p>We offer the best lab and health services you can find anywhere</p>
       
       <section>
         <NavLink to ="/" >Home </NavLink>
@@ -25,10 +25,9 @@ function Home(){
         <NavLink to ="/users" >Users</NavLink>
       </section>
     </div>
-  )} catch (error) {
-    return <ErrorFallback error={error} />
-  }
-}
+  )} 
+  
+
 
 
 
@@ -37,22 +36,25 @@ function Home(){
 
 
 function App() {
- 
+  try{
 
   return(
     <div className='main-container'>
-      <Routes>
+      <Routes className="navigate">
+      <Route path="*" element={<PageNotFound/>}/>
         <Route path ="/" element={<Home/>}/>
-        <Route path ="/about" element={<About/>}>
+        <Route  path ="/about" element={<About/>}>
            <Route path='/about/ourvision' element={<OurVision />} /> 
            <Route path='/about/contactus' element={<ContactUs />} />
         </Route> 
-        <Route path ="/users" element ={<Users/>}/>
-        <Route path="*" element={<PageNotFound/>}/>
+        <Route path="/users"  element ={<Users/>}/>
+        
       </Routes>
 
     </div>
-  )
+  )} catch (error) {
+    return <ErrorFallback error={error} />
+  }
   
    
 }
