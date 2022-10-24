@@ -1,4 +1,4 @@
-import axios from 'axios';
+//import axios from 'axios';
 import { useState, useEffect } from 'react';
 import UserPage from "./UserPage";
 import ErrorFallback from './ErrorFallBack';
@@ -11,17 +11,32 @@ import Pagination from './Pagination';
     const [currentPage, setCurrentPage] = useState(1)
     const [usersPerPage] = useState(1)
 
-    useEffect(() => {
-        const fetchUsers = async () =>{
-            setLoading(true);
-            const res = await axios.get("https://randomuser.me/api");
-            setUsers(res.data.results);
-            setLoading(false)
+   // useEffect(() => {
+       // const fetchUsers = async () =>{
+          //  setLoading(true);
+           // const res = await axios.get("https://randomuser.me/api");
+           // setUsers(res.data["results"]);
+           // setLoading(false)
 
     
+       // }
+        //fetchUsers()
+  //  }, [])
+
+    useEffect(() => {
+      const fetchData= async() => {
+        try {
+          setLoading(true)
+          const response = await fetch('https://randomuser.me/api')
+          const data = await response.json();
+          setUsers(data)
+        
+        } catch (error) {
+          console.log(error)
         }
-        fetchUsers()
-    }, [])
+      }
+      fetchData()
+    },[])
 
     //Get current Users
     const indexOfLastUser = currentPage * usersPerPage;
