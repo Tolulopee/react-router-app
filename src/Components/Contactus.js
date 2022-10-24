@@ -1,12 +1,5 @@
-
-
 export default function ContactUs() {
-
-
-    
-      
-    
-        return (
+     return (
             <div>
                 <h1>Yeah</h1>
           

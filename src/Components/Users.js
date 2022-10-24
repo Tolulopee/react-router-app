@@ -15,7 +15,7 @@ import Pagination from './Pagination';
         const fetchUsers = async () =>{
             setLoading(true);
             const res = await axios.get("https://randomuser.me/api");
-            setUsers(res.data["results"]);
+            setUsers(res.data.results);
             setLoading(false)
 
     
