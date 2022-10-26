@@ -5,14 +5,16 @@ const UserPage= ({ users, loading}) => {
         return <h2>Please wait a moment...</h2>
     }
    return (
-       <div>
+          <div>
          {users.map(user =>(
-            <li key ={user.id}>
-                {user.name}
+            <li key ={user.login.uuid}>
+                {user.name.first}
             </li>
+            
         ))}
-
         </div>
+
+    
 
     
     

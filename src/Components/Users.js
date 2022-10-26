@@ -27,7 +27,7 @@ import Pagination from './Pagination';
       const fetchData= async() => {
         try {
           setLoading(true)
-          const response = await fetch('https://randomuser.me/api')
+          const response = await fetch('https://randomuser.me/api/')
           const data = await response.json();
           setUsers(data)
         

@@ -6,7 +6,9 @@ import Users from './Components/Users';
 import OurVision from './Components/Ourvision';
 import ContactUs from './Components/Contactus';
 import PageNotFound from './Components/PageNotFound';
-import ErrorFallback from './Components/ErrorFallBack'
+import ErrorFallback from './Components/ErrorFallBack';
+import consultationImage from './Images/undraw_doctor_kw5l.svg';
+
 
 
 
@@ -23,6 +25,22 @@ function Home(){
         <NavLink to ="/" >Home </NavLink>
         <NavLink to ="/about">About</NavLink>
         <NavLink to ="/users" >Users</NavLink>
+      </section>
+
+      <section>
+        <div>
+          <h3>Laboratory Services</h3>
+          <img></img>
+        </div>
+        <div>
+          <h3>Medical Tests</h3>
+          <img></img>
+        </div>
+
+        <div>
+          <h3>Consultation</h3>
+          <img src={consultationImage}></img>
+        </div>
       </section>
     </div>
   )} 
