@@ -7,7 +7,6 @@ import OurVision from './Components/Ourvision';
 import ContactUs from './Components/Contactus';
 import PageNotFound from './Components/PageNotFound';
 import ErrorFallback from './Components/ErrorFallBack';
-import consultationImage from './Images/undraw_doctor_kw5l.svg';
 
 
 
@@ -18,11 +17,11 @@ function Home(){
  
   return(
     <div className="home-container">
-      <h1>T-Lab Diagonistics </h1>
+      <h1 className='main-title'>T-Lab Diagonistics </h1>
       <p>We offer the best lab and health services you can find anywhere</p>
       
       <section>
-        <NavLink to ="/" >Home </NavLink>
+        <NavLink  to ="/" >Home </NavLink>
         <NavLink to ="/about">About</NavLink>
         <NavLink to ="/users" >Users</NavLink>
       </section>
@@ -39,7 +38,7 @@ function Home(){
 
         <div>
           <h3>Consultation</h3>
-          <img src={consultationImage}></img>
+          <img></img>
         </div>
       </section>
     </div>
