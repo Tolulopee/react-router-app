@@ -11,23 +11,102 @@
 
 .main-container{
   padding:30px;
-  border:10px solid red;
+  
 }
 
 .home-container{
   padding:30px;
-  color:#19b8a9;
+  color:white;
 }
 
 .main-title{
-  border:1px solid white;
   padding:10px;
   display:flex;
   justify-content:center;
   align-items:center;
   font-weight:700;
   font-size:45px;
+  align-items:center;
+  
+}
 
+.home-container p{
+  font-size:25px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.about-container{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  color:white;
+  margin-bottom:30px;
+  
 
 }
+
+.about-header{
+  display:block;
+  font-family: 'Monsterrat', sans-serif;
+  font-size:40px;
+  padding:20px;
+}
+
+.about-content{
+ max-width:900px;
+ font-size:26px;
+}
+
+span{
+  color:aqua;
+  font-weight:500;
+}
+
+.navigate{
+  background-color: #4fd8cb;
+  margin-right:10px;
+  padding:12px;
+  color:black;
+  text-decoration:none;
+  border-radius:3px;
+}
+
+.navigate:hover{
+  font-weight: bold;
+}
+
+.vision-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  max-width:900px;
+  margin-top:15px;
+  font-size:26px;
+}
+
+.vision-content{
+  font-size:24px;
+}
+
+.contact-container{
+  font-size:22px;
+  margin-top:15px;
+}
+
+ul > li{
+  list-style-type: none;
+  padding:5px;
+}
+.links{
+  margin-top:20px;
+  
+}
+
+.home-images{
+  margin-top:20px;
+}
+
 
