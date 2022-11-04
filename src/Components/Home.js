@@ -1,4 +1,5 @@
 import { Link} from 'react-router-dom';
+//import consultationImage from './Images/Doctors.svg'
 
 function Home(){
  
@@ -16,7 +17,7 @@ function Home(){
         <section className='home-images'>
           <div>
             <h3>Laboratory Services</h3>
-            <img src="" alt="animation of lab services"></img>
+            <img src="../Images/Doctors.svg" alt="animation of lab services"></img>
           </div>
           <div>
             <h3>Medical Tests</h3>

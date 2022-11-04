@@ -41,7 +41,7 @@ import Pagination from './Pagination';
     //Get current Users
     const indexOfLastUser = currentPage * usersPerPage;
     const indexOfFirstUser = indexOfLastUser -usersPerPage;
-    const currentUsers= users.slice(indexOfFirstUser , indexOfLastUser);
+    const Users= users.slice(indexOfFirstUser , indexOfLastUser);
 
 
     //Change page
@@ -53,7 +53,7 @@ import Pagination from './Pagination';
     return(
       <div className="users-container">
         <h1>Users</h1>
-        <UserPage users={currentUsers} loading={loading}/>
+        <UserPage users={Users} loading={loading}/>
         <Pagination usersPerPage={usersPerPage} totalUsers={users.length} paginate={paginate}/>
       </div>
     )} catch(error){
