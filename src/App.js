@@ -1,5 +1,6 @@
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
+import {Helmet} from "react-helmet"
 import Home from './Components/Home';
 import About from './Components/About';
 import Users from './Components/Users';
@@ -11,9 +12,13 @@ import ErrorFallBack from './Components/ErrorFallBack';
 
 function App() {
   
-// updated the errorfallback compnent hopefully it hasnt been graded yet
+// updated the errorfallback component hopefully it hasnt been graded yet
   return(
     <div className='main-container'>
+      <Helmet>
+      <title>React Router App</title>
+        <meta name="description" content="Used react router to build a page that collects data from an api"/>
+      </Helmet>
       <ErrorFallBack>
       <Routes className="navigate">
       <Route path="*" element={<PageNotFound/>}/>
